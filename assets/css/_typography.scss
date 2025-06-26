@@ -1,0 +1,62 @@
+@use "colors";
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-weight: 400;
+  src: url("/fonts/static/InstrumentSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-weight: 600;
+  src: url("/fonts/static/InstrumentSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Instrument Sans";
+  font-weight: 700;
+  src: url("/fonts/static/InstrumentSans-Bold.ttf");
+}
+
+:root {
+  --body-font-family: "Instrument Sans", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  --text-tinted-color: var(--color-grey-500);
+}
+
+.tinted {
+  color: var(--text-tinted-color);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.xl {
+  font-size: 32px;
+}
+
+.lg {
+  font-size: 24px;
+}
+
+.sm {
+  font-size: 14px;
+}
+
+.xs {
+  font-size: 12px;
+}
+
+.title-responsive {
+  font-size: 24px;
+  font-weight: bold;
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
+}

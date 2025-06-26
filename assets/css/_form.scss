@@ -1,0 +1,80 @@
+@use "colors";
+@use "typography";
+
+.input-decoration {
+  border: 1px solid var(--color-grey-200);
+  border-radius: var(--default-border-radius);
+  background-color: white;
+  overflow: hidden;
+
+  &.active,
+  &:focus-within {
+    border-color: var(--color-purple-600);
+    box-shadow: 0 0 32px 0
+      color-mix(in srgb, var(--color-purple-600) 25%, transparent);
+
+    & .input-field {
+      caret-color: var(--color-purple-600);
+    }
+  }
+
+  &.invalid {
+    border-color: var(--color-red-500);
+    box-shadow: none;
+  }
+}
+
+.input-prefix {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  justify-content: end;
+  color: var(--color-grey-500);
+
+  &.active {
+    color: var(--color-purple-600);
+  }
+}
+
+.input-suffix {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  justify-content: start;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-inline: 16px;
+  height: 56px;
+  outline: none;
+
+  &.invalid {
+    color: var(--color-red-500);
+    caret-color: var(--color-red-500);
+  }
+
+  &::placeholder {
+    color: color-mix(in srgb, var(--color-grey-900) 50%, transparent);
+  }
+}
+
+.hover {
+  background-color: color-mix(in srgb, var(--color-purple-600) 5%, transparent);
+}
+
+.color-active {
+  color: var(--color-purple-600);
+}
+
+.input-label {
+  color: var(--color-grey-900);
+  display: block;
+  margin-bottom: 8px;
+
+  &.invalid {
+    color: var(--color-red-500);
+  }
+}

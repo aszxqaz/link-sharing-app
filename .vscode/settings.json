@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    ".nuxt": true,
+    ".output": true,
+    "generated": true,
+    "node_modules": true
+    // "prisma": true,
+    // "public": true,
+    // "server": true,
+    // "shared": true
+  },
+  "svg.preview.background": "transparent"
+}
